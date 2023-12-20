@@ -109,15 +109,15 @@ console.log(likeButton);
 const liked = [] ;
 for (let i = 0; i < likeButton.length; i++) {
 likeButton[i].addEventListener('click', function () {
-    this.classList.toggle("like-button--liked");
+    this.classList.toggle('like-button--liked');
 
-    if(!(this.classList.contains("like-button--liked"))){
-        let allLike = parseInt(document.getElementById("like-counter-"+(i+1)).innerHTML);
-        document.getElementById("like-counter-"+(i+1)).innerHTML=(allLike - 1); 
+    if(!(this.classList.contains('like-button--liked'))){
+        let allLike = parseInt(document.getElementById('like-counter-'+(i+1)).innerHTML);
+        document.getElementById('like-counter-'+(i+1)).innerHTML=(allLike - 1); 
     }
     else{
-        let allLike =parseInt(document.getElementById("like-counter-"+(i+1)).innerHTML);
-        document.getElementById("like-counter-"+(i+1)).innerHTML=(allLike + 1); 
+        let allLike =parseInt(document.getElementById('like-counter-'+(i+1)).innerHTML);
+        document.getElementById('like-counter-'+(i+1)).innerHTML=(allLike + 1); 
     }
 
 })
