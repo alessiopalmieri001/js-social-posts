@@ -59,8 +59,7 @@ const posts = [
 
 const container = document.getElementById('container');
 console.log(container);
-const buttonsLike = document.querySelector('.likes__cta');
-console.log(buttonsLike);
+
 
 for(let i = 0; i < posts.length; i++ ){
 
@@ -99,3 +98,26 @@ for(let i = 0; i < posts.length; i++ ){
 };
 
 
+const buttonsLike = document.querySelector('.likes__cta');
+console.log(buttonsLike);
+
+const likeButton = document.querySelector('.like-button');
+console.log(likeButton);
+
+
+
+buttonsLike.addEventListener('click', function(){
+
+    likeButton.classList.toggle('like-button--liked');
+
+    let contatore = posts.likes;
+    
+    if(likeButton.contains('like-button--liked')){
+        contatore++;
+    }
+    else{
+        contatore--;
+    }
+    
+
+});
