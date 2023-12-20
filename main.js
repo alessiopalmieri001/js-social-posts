@@ -98,8 +98,7 @@ for(let i = 0; i < posts.length; i++ ){
 };
 
 
-const buttonsLike = document.querySelector('.likes__cta');
-console.log(buttonsLike);
+
 
 const likeButton = document.querySelectorAll('.like-button');
 console.log(likeButton);
@@ -121,4 +120,4 @@ likeButton[i].addEventListener('click', function () {
     }
 
 })
-}
+};
