@@ -101,23 +101,24 @@ for(let i = 0; i < posts.length; i++ ){
 const buttonsLike = document.querySelector('.likes__cta');
 console.log(buttonsLike);
 
-const likeButton = document.querySelector('.like-button');
+const likeButton = document.querySelectorAll('.like-button');
 console.log(likeButton);
 
 
 
-buttonsLike.addEventListener('click', function(){
+const liked = [] ;
+for (let i = 0; i < likeButton.length; i++) {
+likeButton[i].addEventListener('click', function () {
+    this.classList.toggle("like-button--liked");
 
-    likeButton.classList.toggle('like-button--liked');
-
-    let contatore = posts.likes;
-    
-    if(likeButton.contains('like-button--liked')){
-        contatore++;
+    if(!(this.classList.contains("like-button--liked"))){
+        let allLike = parseInt(document.getElementById("like-counter-"+(i+1)).innerHTML);
+        document.getElementById("like-counter-"+(i+1)).innerHTML=(allLike - 1); 
     }
     else{
-        contatore--;
+        let allLike =parseInt(document.getElementById("like-counter-"+(i+1)).innerHTML);
+        document.getElementById("like-counter-"+(i+1)).innerHTML=(allLike + 1); 
     }
-    
 
-});
+})
+}
