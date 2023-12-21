@@ -105,7 +105,7 @@ console.log(likeButton);
 
 
 
-const liked = [] ;
+
 for (let i = 0; i < likeButton.length; i++) {
 likeButton[i].addEventListener('click', function () {
     this.classList.toggle('like-button--liked');
